@@ -1,18 +1,18 @@
 import React from "react";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Home_instructor from "../components/Perfil_instructor/Home/Home_instructor";
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Navbar from "../pages/Navbar";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Switch>
-          <Route exact={true} path='/home' component={Home_instructor} />
     
-        </Switch>
+      <Router>
+        
+          <Route exact={true} path='/navbar' component={Navbar} />
+    
+        
       </Router>
       
-    </>
+    
   );
 }
 

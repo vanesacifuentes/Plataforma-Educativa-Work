@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../src/Routes/App';
-import Home_instructor from './components/Perfil_instructor/Home/Home_instructor';
+import Layout from './pages/Layout';
+import Navbar from './pages/Navbar';
+import 'fontsource-roboto'
 
 
 ReactDOM.render(
   <React.StrictMode>
     
-    <Home_instructor />
+    < Layout/>
   </React.StrictMode>,
   document.getElementById('root')
 );
