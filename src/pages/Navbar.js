@@ -18,7 +18,10 @@ const useStyles = makeStyles(() => ({
     borderRadius: '10%'
   }, 
   iniciosesion:{
-    borderRadius: '5%'
+    borderRadius: '5%',
+  },
+  registro:{
+    borderRadius: '5%',
   }
 }));
 
@@ -45,6 +48,9 @@ function Navbar() {
           </Button>
           <Button variant="text" color="default" className={classes.iniciosesion}>
             Contáctenos
+          </Button>
+          <Button variant="contained" color="default" className={classes.registro}>
+            Registrarme
           </Button>
           <Button variant="contained" color="default" className={classes.iniciosesion}>
             Login
