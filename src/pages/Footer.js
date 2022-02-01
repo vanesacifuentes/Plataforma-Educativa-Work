@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import {Box, Container, Grid, IconButton } from '@material-ui/core'
 
 function Footer() {
@@ -18,3 +18,4 @@ function Footer() {
 }
 
 export default Footer;
+*/

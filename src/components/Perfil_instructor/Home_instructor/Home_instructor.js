@@ -4,7 +4,7 @@ function Home_instructor() {
     return (
         <>
 
-        <h1>Hola este es el Home</h1>
+        <h1>Hola este es el Home instructor</h1>
 
         </>
     );

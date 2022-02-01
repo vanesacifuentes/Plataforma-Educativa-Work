@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { Card, Box, Button, CardContent, CardMedia, Typography, IconButton } from '@material-ui/core'
 import { ArrowBackIos, ArrowForwardIosSharp } from '@material-ui/icons'
 
@@ -47,3 +47,4 @@ function Card_inicio() {
 }
 
 export default Card_inicio;
+*/

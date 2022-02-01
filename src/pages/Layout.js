@@ -1,7 +1,7 @@
-import React from 'react';
+/*import React from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Navbar from './Navbar';
+import Navbar_inicio from './Navbar_inicio';
 import Card_inicio from './Card_inicio';
 
 const useStyles= makeStyles(()=>({
@@ -18,7 +18,7 @@ function Layout() {
         <Grid container spacing={3}>
 
             <Grid item xs={12}>
-                <Navbar/>
+                <Navbar_inicio/>
             </Grid>
 
             <Grid item xs={12}>
@@ -31,3 +31,4 @@ function Layout() {
 }
 
 export default Layout;
+*/

@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Switch>
 
-          <Route exact={true} path='/home:instructor' component={Home_instructor} />
+          <Route exact={true} path='/home_instructor' component={Home_instructor} />
           <Route exact={true} path='/gestion_usuario' component={Gestion_usuario} />
           <Route exact={true} path='/ver_usuario' component={Ver_usuario} />
           <Route exact={true} path='/gestion_cursos' component={Gestion_cursos} />

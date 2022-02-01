@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../src/Routes/App';
-import Layout from './pages/Layout';
-import Navbar from './pages/Navbar';
+import Navbar_inicio from './pages/Navbar_inicio';
 import 'fontsource-roboto'
+import MenuBar_Instructor from './components/Perfil_instructor/Menu_instructor/MenuBar_Instructor';
 
 
 ReactDOM.render(
   <React.StrictMode>
     
-    < Layout/>
+    < MenuBar_Instructor/>
   </React.StrictMode>,
   document.getElementById('root')
 );
