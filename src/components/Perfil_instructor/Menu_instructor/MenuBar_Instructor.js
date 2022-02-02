@@ -1,92 +1,74 @@
 import React from 'react';
-import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { AppBar, Button, IconButton, Toolbar, Typography, Menu, MenuItem } from '@material-ui/core'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { makeStyles } from '@material-ui/core/styles'
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import Drawer from '@mui/material/Drawer';
+
 
 
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1
   },
-  titte: {
+  tittle: {
     flexGrow: 1
   },
   header: {
-    backgroundColor: '#089ca4',
-    color: 'white',
-  },
-  imagen: {
-    borderRadius: '10%'
-  }, 
-  iniciosesion:{
-    borderRadius: '5%',
-  },
-  registro:{
-    borderRadius: '5%',
+    backgroundColor: 'transparent',
+    color: '#089ca4',
   }
 }));
 
 
 function MenuBar_Instructor() {
   const classes = useStyles();
+
+  const [auth, setAuth] = React.useState(true);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleChange = (event) => {
+    setAuth(event.target.checked);
+  };
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  
+
   return (
 
     <div className={classes.root} >
 
       <AppBar position="static" className={classes.header}>
         <Toolbar>
-          <IconButton>
-            <img src={require('../../../assets/img/logo png.png')} width='80px' height='80px' className={classes.imagen} />
-          </IconButton>
-          <Typography variant="h5" className={classes.titte}>
-            Learning Now
+          <Typography variant="h6" className={classes.titte}>
+            Bienvenido ""Nombre usuario" usted ha ingresado como "instructor"
           </Typography>
-
-          <Drawer
-        sx={{
-          
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-           
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="permanent"
-        anchor="left"
-      >
-        <Toolbar />
-        <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-          
+          <IconButton>
+            <AccountCircleIcon></AccountCircleIcon>
+          </IconButton>
+          <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+              </Menu>
         </Toolbar>
       </AppBar>
     </div>
