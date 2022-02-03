@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Button, IconButton, Toolbar, Typography, Menu, MenuItem } from '@material-ui/core'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { makeStyles } from '@material-ui/core/styles'
+import { ForkRightSharp } from '@mui/icons-material';
 
 
 
@@ -10,11 +11,12 @@ const useStyles = makeStyles(() => ({
     flexGrow: 1
   },
   tittle: {
-    flexGrow: 1
+    p: 1,
+    flexShrink: 1
   },
   header: {
-    backgroundColor: 'transparent',
-    color: '#089ca4',
+    backgroundColor: '#089ca4',
+    color: 'white',
   }
 }));
 
@@ -37,7 +39,7 @@ function MenuBar_Instructor() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  
+
 
   return (
 
@@ -46,29 +48,29 @@ function MenuBar_Instructor() {
       <AppBar position="static" className={classes.header}>
         <Toolbar>
           <Typography variant="h6" className={classes.titte}>
-            Bienvenido ""Nombre usuario" usted ha ingresado como "instructor"
+            Bienvenido ""Nombre usuario"
           </Typography>
           <IconButton>
             <AccountCircleIcon></AccountCircleIcon>
           </IconButton>
           <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={open}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-              </Menu>
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={open}
+            onClose={handleClose}
+          >
+            <MenuItem onClick={handleClose}>Profile</MenuItem>
+            <MenuItem onClick={handleClose}>My account</MenuItem>
+          </Menu>
         </Toolbar>
       </AppBar>
     </div>

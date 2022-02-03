@@ -1,6 +1,5 @@
 import React from 'react';
-import { Drawer, 
-  Button, 
+import { Drawer,  
   IconButton, 
   Toolbar, 
   Typography, 
@@ -10,7 +9,7 @@ import { Drawer,
   ListItemIcon,
   ListItemText } from '@material-ui/core'
 
-import {InboxIcon, MailIcon} from '@material-ui/icons'
+import {Inbox, Mail} from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles'
 
 
@@ -22,38 +21,26 @@ const useStyles = makeStyles(() => ({
   titte: {
     flexGrow: 1
   },
-  header: {
-    backgroundColor: '#089ca4',
+  drawer: {
+    backgroundColor: 'black',
     color: 'white',
-  },
-  imagen: {
-    borderRadius: '10%'
-  }, 
-  iniciosesion:{
-    borderRadius: '5%',
-  },
-  registro:{
-    borderRadius: '5%',
   }
 }));
 
 
-function MenuBar_Instructor() {
+function Drawer_instructor() {
   const classes = useStyles();
   return (
 
     <div className={classes.root} >
-
-      <AppBar position="static" className={classes.header}>
-        <Toolbar>
-
-        <IconButton>
-            <img src={require('../../../assets/img/logo png.png')} width='80px' height='80px' className={classes.imagen} />
-          </IconButton>
-          <Typography variant="h6" className={classes.titte}>
-            Learning Now
-          </Typography>
-          
+        
+          <Drawer
+            variant="permanent"
+            anchor="left"
+            className={classes.drawer}
+          >
+            <Toolbar />
+                   
           <IconButton>
             <img src={require('../../../assets/img/logo png.png')} width='80px' height='80px' className={classes.imagen} />
           </IconButton>
@@ -61,28 +48,12 @@ function MenuBar_Instructor() {
             Learning Now
           </Typography>
 
-          <Drawer
-            variant="permanent"
-            anchor="left"
-          >
-            <Toolbar />
             <Divider />
             <List>
-              {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+              {['Inicio', 'Gestión cursos', 'Gestión usuarios'].map((text, index) => (
                 <ListItem button key={text}>
                   <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItem>
-              ))}
-            </List>
-            <Divider />
-            <List>
-              {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                    {index % 2 === 0 ? <Inbox /> : <Mail />}
                   </ListItemIcon>
                   <ListItemText primary={text} />
                 </ListItem>
@@ -90,10 +61,8 @@ function MenuBar_Instructor() {
             </List>
           </Drawer>
 
-        </Toolbar>
-      </AppBar>
     </div>
   );
 }
 
-export default MenuBar_Instructor;
+export default Drawer_instructor;

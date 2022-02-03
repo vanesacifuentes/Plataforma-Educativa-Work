@@ -1,10 +1,13 @@
 import React from 'react';
+import MenuBar_Instructor from '../Menu_instructor/MenuBar_Instructor';
+import Drawer_instructor from '../Menu_instructor/Drawer_instructor';
 
 function Home_instructor() {
     return (
         <>
 
-        <h1>Hola este es el Home instructor</h1>
+        <MenuBar_Instructor/>
+        <Drawer_instructor/>
 
         </>
     );
