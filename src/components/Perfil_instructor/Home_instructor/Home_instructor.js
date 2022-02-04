@@ -1,12 +1,12 @@
 import React from 'react';
-import MenuBar_Instructor from '../Menu_instructor/MenuBar_Instructor';
+import MenuBar_Inicio from '../../../pages/MenuBar_Inicio';
 import Drawer_instructor from '../Menu_instructor/Drawer_instructor';
 
 function Home_instructor() {
     return (
         <>
 
-        <MenuBar_Instructor/>
+        <MenuBar_Inicio/>
         <Drawer_instructor/>
 
         </>
