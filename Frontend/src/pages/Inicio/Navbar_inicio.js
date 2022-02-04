@@ -1,5 +1,7 @@
 import React from 'react';
-import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core'
+import MenuBar_Inicio from '../../pages/MenuBar_Inicio';
+import {Link} from 'react-router-dom';
+import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
 
 
@@ -35,7 +37,7 @@ function Navbar_inicio() {
       <AppBar position="static" className={classes.header}>
         <Toolbar>
           <IconButton>
-            <img src={require('../assets/img/logo png.png')} width='80px' height='80px' className={classes.imagen} />
+            <img src={require('../../assets/img/logo png.png')} width='80px' height='80px' className={classes.imagen} />
           </IconButton>
           <Typography variant="h5" className={classes.titte}>
             Learning Now
@@ -49,12 +51,14 @@ function Navbar_inicio() {
           <Button variant="text" color="default" className={classes.iniciosesion}>
             Contáctenos
           </Button>
-          <Button variant="contained" color="default" className={classes.registro}>
-            Registrarme
-          </Button>
-          <Button variant="contained" color="default" className={classes.iniciosesion}>
+
+         
+
+          <Button variant="contained" color="default" className={classes.iniciosesion} >
             Login
           </Button>
+       
+
         </Toolbar>
       </AppBar>
     </div>

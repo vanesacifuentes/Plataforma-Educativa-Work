@@ -1,4 +1,4 @@
-/*import React from 'react';
+import React from 'react';
 import { Card, Box, Button, CardContent, CardMedia, Typography, IconButton } from '@material-ui/core'
 import { ArrowBackIos, ArrowForwardIosSharp } from '@material-ui/icons'
 
@@ -21,8 +21,8 @@ function Card_inicio() {
 
           <Box>
             <CardMedia>
-              <img src={require('../assets/img/img_inicio1.jpg')} width='35%' height='35%' />
-              <img src={require('../assets/img/img_inicio3.jpg')} width='35%' height='35%' />
+              <img src={require('../../assets/img/img_inicio1.jpg')} width='35%' height='35%' />
+              <img src={require('../../assets/img/img_inicio3.jpg')} width='35%' height='35%' />
             </CardMedia>
           </Box>
         </Box>
@@ -47,4 +47,3 @@ function Card_inicio() {
 }
 
 export default Card_inicio;
-*/

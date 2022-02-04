@@ -1,0 +1,34 @@
+version: "3"
+services:
+	sistema-react:
+		build:"./sistema-react"
+  depends_on:
+    - sistema-react-db
+  volumes:
+    - ./sistema-react:/app
+
+  sistema-react-db:
+  enviroment: 
+    POSTGRES_PASSWORD: root
+    POSTGRES_PASSWORD: admin
+    POSTGRES_DB: Plataforma_educativa
+  image: postgres
+  ports:
+    - '5432:5432'
+
+
+  sistema-logueo:
+		build:"./sistema-logueo"
+  depends_on:
+    - sistema-logueo-db
+  volumes:
+    - ./sistema-logueo:/app
+
+  sistema-logueo-db:
+  enviroment: 
+    POSTGRES_PASSWORD: root
+    POSTGRES_PASSWORD: admin
+    POSTGRES_DB: Usuarios
+  image: postgres
+  ports:
+    - '5433:5433'

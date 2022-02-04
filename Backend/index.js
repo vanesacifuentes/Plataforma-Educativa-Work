@@ -1,5 +1,5 @@
 const express = require('express')
-const rutas = require('./rutas.js')
+//const rutas = require('./rutas.js')
 const cors = require('cors')
 
 const App = express();
@@ -8,7 +8,7 @@ const App = express();
 
 App.use(express.json())
 App.use(cors())
-App.use(rutas)
+//App.use(rutas)
 
 
 
